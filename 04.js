@@ -13,7 +13,18 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  let auxNum = ""+num;
+  let reves = [];
+  auxNum.split("");
+  
+  for(let i=auxNum.length-1; i>=0; i--){
+     reves.push(auxNum.charAt(i));  
+  }
+  auxNum = Number(reves.join(""));
+  if((auxNum - num) === 0){
+    return true;
+  }else return false;
+   
 }
 
 // No modifiques nada debajo de esta linea //
